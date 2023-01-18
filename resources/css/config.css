@@ -94,3 +94,10 @@ width: 90%;
 height: 45px;
 }
 
+.boxTools{
+    transition:  ease-out 0.2s;
+}
+.boxTools:hover{
+    transform: scale(1.1);
+}
+
