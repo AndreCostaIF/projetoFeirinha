@@ -20,7 +20,7 @@ use App\Http\Controllers\produtoController;
 */
 
 Route::get('/login', [login::class, 'index'])->name('login');
-Route::get('/feira', [login::class, 'logar'])->name('logar');
+Route::post('/feira', [login::class, 'logar'])->name('logar');
 
 
 Route::get('/cadastroCliente', [UsuarioController::class, 'cadastroCliente'])->name('cadastroCliente');
