@@ -15,11 +15,11 @@ class UsuarioController extends Controller
         if(is_numeric($id)&& $id!=-1){
            $usuario= Usuarios::find($id);
             if(isset($_POST)){
-                if($_POST!=null){   
-                    // dd($usuario->toArray()); 
+                if($_POST!=null){
+                    // dd($usuario->toArray());
                     $usuario->fill($_POST);
                     $usuario->save();
-                }   
+                }
         }
     }
 
@@ -33,17 +33,17 @@ class UsuarioController extends Controller
             $usuario['telefone'] = "";
             $usuario['instagram'] = "";
             $usuario['email'] = "";
-           
-        }  
+
+        }
         //Lista todos os usuários
         $usuarios = Usuarios::all();
-        return view('telasTeste.usuarios_view')->with('usuario',$usuario)->with('usuarios', $usuarios);
-       
+        return view('usuarios_view')->with('usuario',$usuario)->with('usuarios', $usuarios);
+
     }
 
     public function salvar(Request $request)
     {
-    
+
         $request->validate([
             'usuario' => 'required',
             'senha' => 'required',
@@ -71,7 +71,7 @@ class UsuarioController extends Controller
 
         return redirect()->to(route('indexUsuario'));
     }
-   
+
     public function deletar($id)
     {
         $usuario = Usuarios::find($id);

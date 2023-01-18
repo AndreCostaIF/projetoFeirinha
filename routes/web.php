@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\login;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UsuarioController;
@@ -14,9 +15,7 @@ use App\Http\Controllers\UsuarioController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/login', [login::class, 'index'])->name('login');
 
 Route::get('/usuarios/{id?}', [UsuarioController::class, 'indexUsuario'])->name('indexUsuario');
 Route::post('/usuarios/salvar', [UsuarioController::class,'salvar'])->name('salvarUsuario');
