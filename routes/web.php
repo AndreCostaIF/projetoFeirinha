@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\UsuarioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/usuarios/{id?}', [UsuarioController::class, 'indexUsuario'])->name('indexUsuario');
+Route::post('/usuarios/salvar', [UsuarioController::class,'salvar'])->name('salvarUsuario');
+Route::get('/usuarios/novo/deletar/{id}', [UsuarioController::class, 'deletar'])->name('deletarUsuario');
