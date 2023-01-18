@@ -4,6 +4,8 @@ use App\Http\Controllers\login;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\EnderecosController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +23,6 @@ Route::get('/feira', [login::class, 'logar'])->name('logar');
 Route::get('/usuarios/{id?}', [UsuarioController::class, 'indexUsuario'])->name('indexUsuario');
 Route::post('/usuarios/salvar', [UsuarioController::class,'salvar'])->name('salvarUsuario');
 Route::get('/usuarios/novo/deletar/{id}', [UsuarioController::class, 'deletar'])->name('deletarUsuario');
+Route::get('/enderecos/{id?}', [EnderecosController::class, 'indexEndereco'])->name('indexEndereco');
+Route::post('/enderecos/salvar', [EnderecosController::class, 'salvar'])->name('salvarEndereco');
+Route::get('/enderecos/deletar/{id}', [EnderecosController::class, 'deletar'])->name('deletarEndereco');
