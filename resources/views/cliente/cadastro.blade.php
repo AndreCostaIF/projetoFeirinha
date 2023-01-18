@@ -5,7 +5,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-<title>Módulos boletos</title>
+<title>Cadastro - IFSol</title>
 <link rel="icon" type="image/x-icon" href="{{asset('assets/favicon-intelnet.ico')}}">
 
 <!-- Fonts -->
@@ -31,30 +31,55 @@
 
             <div class="col-4 boxLogin">
                 <div>
-                    <h4 class=" mt-3">Login</h4>
+                    <h4 class=" mt-3">Cadastro</h4>
                     <form action="{{route('logar')}}" method="POST">
                         @csrf
-                        <div class="form-floating">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="nome" class="form-control" placeholder="nome"
+                                required>
+                            <label for="floatingInput"  id="nome">Nome</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" name="email" class="form-control" placeholder="email"
+                                required>
+                            <label for="floatingInput"  id="email">Email</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" name="rua" class="form-control" placeholder="rua"
+                                required>
+                            <label for="floatingInput"  id="rua">Rua</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" name="bairro" class="form-control" placeholder="bairro"
+                                required>
+                            <label for="floatingInput"  id="bairro">Bairro</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
                             <input type="text" name="usuario" class="form-control" placeholder="usuario"
                                 required>
                             <label for="floatingInput"  id="usuario">Usuario</label>
                         </div>
 
-                        <div class="form-floating mt-3">
+                        <div class="form-floating mb-3 mt-3">
                             <input type="password"  name="senha" class="form-control" placeholder="senha"
                                required>
                             <label for="floatingInput" id="senha">Senha</label>
                         </div>
 
-                        <div class="form-floating mt-3  text-center">
-                            <button type="submit" class="btn btn-outline-danger" id="botaoForm">Entrar</button>
+                        <div class="form-floating mb-3 mt-3 mb-3 text-center">
+                            <button type="submit" class="btn btn-outline-danger" id="botaoForm">Cadastrar</button>
                         </div>
                         <div class="text-end">
 
-                            <a href="{{ route('cadastroCliente') }}"><small class="text-center" >Não tenho conta, cadastrar</small></a>
+                            <a href="{{ route('login') }}"><small class="text-center" >Já tenho conta</small></a>
                         </div>
+
                     </form>
                 </div>
             </div>
         </div>
-    @include('footer')
+@include('footer')

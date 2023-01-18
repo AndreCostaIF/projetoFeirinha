@@ -22,6 +22,9 @@ use App\Http\Controllers\produtoController;
 Route::get('/login', [login::class, 'index'])->name('login');
 Route::get('/feira', [login::class, 'logar'])->name('logar');
 
+
+Route::get('/cadastroCliente', [UsuarioController::class, 'cadastroCliente'])->name('cadastroCliente');
+
 //tem que passar o id da categoria aqui; (n coloquei pq n tenho nd cadastrado)
 Route::get('/categoria', [categoria::class, 'buscarProdutos'])->name('produtos');
 

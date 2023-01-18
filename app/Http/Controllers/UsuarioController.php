@@ -8,6 +8,12 @@ use App\Models\Usuarios;
 class UsuarioController extends Controller
 {
 
+    public function cadastroCliente(){
+
+        //CODIGO DE CECILIA TA ALI EM BAIXO, USEM ISSO AQUI COMO QUISEREM, SO RETORNEM ESSA VIEW
+
+        return view('cliente.cadastro');
+    }
 
     public function indexUsuario($id = null)
     {
