@@ -10,6 +10,6 @@ class categoria extends Controller
 
         //BUSCA OS PRODUTOS DESSA CATEGORIA AQUI E RETORNA PRA VIEW
 
-        return view('cliente.listaProdutos');
+        return view('listaProdutos');
     }
 }

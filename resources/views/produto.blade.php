@@ -1,0 +1,3 @@
+@include('masterhead')
+
+@include('footer')

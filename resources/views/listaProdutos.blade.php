@@ -17,7 +17,7 @@
           <img src="{{ asset('assets/imgprodutos/frutas/maca.png') }}" class="card-img-top" alt="...">
 
           <div class="card-body">
-            <h2 class="card-title text-center">Frutas</h2>
+            <h2 class="card-title text-center">Maçãs</h2>
             <p class="card-text">
                 Se os produtos tiverem alguma descrição pode ser colocado aqui, caso não basta apagar essa msg.
             </p>
