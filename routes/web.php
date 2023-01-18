@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\categoria;
 use App\Http\Controllers\login;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,9 @@ use App\Http\Controllers\UsuarioController;
 
 Route::get('/login', [login::class, 'index'])->name('login');
 Route::get('/feira', [login::class, 'logar'])->name('logar');
+
+//tem que passar o id da categoria aqui; (n coloquei pq n tenho nd cadastrado)
+Route::get('/categoria', [categoria::class, 'buscarProdutos'])->name('produtos');
 
 Route::get('/usuarios/{id?}', [UsuarioController::class, 'indexUsuario'])->name('indexUsuario');
 Route::post('/usuarios/salvar', [UsuarioController::class,'salvar'])->name('salvarUsuario');
