@@ -101,3 +101,17 @@ height: 45px;
     transform: scale(1.1);
 }
 
+.boxImg{
+    min-height: 14rem;
+    max-height: 14rem;
+    align-items: center;
+
+}
+
+.boxProduct, .boxProductPrice{
+    height: 40rem;
+}
+
+.priceCard{
+    font-size: 22px;
+}
