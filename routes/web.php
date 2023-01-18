@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\EnderecosController;
 use App\Http\Controllers\produtoController;
+use App\Http\Controllers\CategoriasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,6 @@ Route::get('/usuarios/novo/deletar/{id}', [UsuarioController::class, 'deletar'])
 Route::get('/enderecos/{id?}', [EnderecosController::class, 'indexEndereco'])->name('indexEndereco');
 Route::post('/enderecos/salvar', [EnderecosController::class, 'salvar'])->name('salvarEndereco');
 Route::get('/enderecos/deletar/{id}', [EnderecosController::class, 'deletar'])->name('deletarEndereco');
+Route::get('/categorias/{id?}', [CategoriasController::class, 'indexCategoria'])->name('indexCategoria');
+Route::post('/categorias/salvar', [CategoriasController::class, 'salvar'])->name('salvarCategoria');
+Route::get('/categorias/deletar/{id}', [CategoriasController::class, 'deletar'])->name('deletarCategoria');
