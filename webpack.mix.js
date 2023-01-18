@@ -16,3 +16,9 @@ mix.js('resources/js/app.js', 'public/js')
         //
     ]);
 mix.styles(['resources/css/app.css','resources/css/config.css','resources/css/header.css','resources/css/app.css'], 'public/css/style.css');
+mix.scripts(['node_modules/jquery/dist/jquery.js'],
+ 'public/jquery.js')
+ .scripts('node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+            'public/bootstrap/bootstrap.js')
+mix.sass('node_modules/bootstrap/scss/bootstrap.scss',
+            'public/bootstrap/bootstrap.css');

@@ -16,6 +16,7 @@ use App\Http\Controllers\UsuarioController;
 */
 
 Route::get('/login', [login::class, 'index'])->name('login');
+Route::get('/feira', [login::class, 'logar'])->name('logar');
 
 Route::get('/usuarios/{id?}', [UsuarioController::class, 'indexUsuario'])->name('indexUsuario');
 Route::post('/usuarios/salvar', [UsuarioController::class,'salvar'])->name('salvarUsuario');

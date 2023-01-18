@@ -32,7 +32,7 @@
             <div class="col-4 boxLogin">
                 <div>
                     <h4 class=" mt-3">Login</h4>
-                    <form action="{{route('login')}}" method="POST">
+                    <form action="{{route('logar')}}" method="POST">
                         @csrf
                         <div class="form-floating">
                             <input type="text" name="usuario" class="form-control" placeholder="usuario"

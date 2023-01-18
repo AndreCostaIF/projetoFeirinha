@@ -10,4 +10,11 @@ class login extends Controller
 
         return view('login');
     }
+
+    public function logar(){
+
+        //codigo de login aqui
+
+        return view('cliente.index');
+    }
 }
