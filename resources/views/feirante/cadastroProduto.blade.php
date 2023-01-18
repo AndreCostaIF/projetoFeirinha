@@ -5,7 +5,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-<title>Login - IFSol</title>
+<title>Cadastro - IFSol</title>
 <link rel="icon" type="image/x-icon" href="{{asset('assets/favicon-intelnet.ico')}}">
 
 <!-- Fonts -->
@@ -31,30 +31,23 @@
 
             <div class="col-4 boxLogin">
                 <div>
-                    <h4 class=" mt-3">Login</h4>
+                    <h4 class=" mt-3">Cadastro de produto</h4>
                     <form action="{{route('logar')}}" method="POST">
                         @csrf
-                        <div class="form-floating">
-                            <input type="text" name="usuario" class="form-control" placeholder="usuario"
+                        <div class="form-floating mb-3">
+                            <input type="text" name="nome" class="form-control" placeholder="nome"
                                 required>
-                            <label for="floatingInput"  id="usuario">Usuario</label>
+                            <label for="floatingInput"  id="nome">Nome do produto</label>
                         </div>
 
-                        <div class="form-floating mt-3">
-                            <input type="password"  name="senha" class="form-control" placeholder="senha"
-                               required>
-                            <label for="floatingInput" id="senha">Senha</label>
-                        </div>
+                        <!-- COLOCA MAIS CAMPOS Q VCS VAO PRECISAR AE-->
 
-                        <div class="form-floating mt-3  text-center">
-                            <button type="submit" class="btn btn-outline-danger" id="botaoForm">Entrar</button>
-                        </div>
-                        <div class="text-end">
 
-                            <a href="{{ route('cadastroCliente') }}"><small class="text-center" >Não tenho conta, cadastrar</small></a>
+                        <div class="form-floating mb-3 mt-3 mb-3 text-center">
+                            <button type="submit" class="btn btn-outline-danger" id="botaoForm">Cadastrar</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    @include('footer')
+@include('footer')

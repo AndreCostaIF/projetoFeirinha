@@ -12,4 +12,9 @@ class produtoController extends Controller
 
         return view('produto');
     }
+
+    public function cadastroProdutos(){
+
+        return view('feirante.cadastroProduto');
+    }
 }

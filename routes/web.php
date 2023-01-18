@@ -24,6 +24,7 @@ Route::post('/feira', [login::class, 'logar'])->name('logar');
 
 
 Route::get('/cadastroCliente', [UsuarioController::class, 'cadastroCliente'])->name('cadastroCliente');
+Route::get('/cadastroProdutos', [produtoController::class, 'cadastroProdutos'])->name('cadastroProdutos');
 
 //tem que passar o id da categoria aqui; (n coloquei pq n tenho nd cadastrado)
 Route::get('/categoria', [categoria::class, 'buscarProdutos'])->name('produtos');

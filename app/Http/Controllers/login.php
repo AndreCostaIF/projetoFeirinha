@@ -42,7 +42,7 @@ class login extends Controller
 
                 $this->criarSessao($dados);
 
-                return view('cliente/index');
+                return view('cliente.index');
             } else {
 
                 return redirect()->back()->with('erro', "Usuário ou senha incorreta");
@@ -59,14 +59,14 @@ class login extends Controller
 
                 $this->criarSessao($dados);
 
-                return view('cliente/index');
+                return view('cliente.index');
             } else {
 
                 return redirect()->back()->with('erro', "Usuário ou senha incorreta");
             }
 
         }
-        
+
     }
 
 
